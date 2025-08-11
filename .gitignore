@@ -1,0 +1,51 @@
+# Directories to ignore
+data/
+icebert/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model outputs
+scandibert_bias_2/
+icebert_bias_2/
+*.bin
+*.safetensors
+*.pth
+*.pt
+
+# Logs and results
+*.log
+training_log.json
+test_results.json
+evaluation_report.txt
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+# Output images (keep heatmap.png for documentation)
+# heatmap.png
