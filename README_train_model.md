@@ -1,4 +1,4 @@
-# train_claude.py
+# train_model.py
 
 ## Purpose
 Advanced training and evaluation script for bias detection models. Features class weighting for imbalanced data, early stopping, and comprehensive evaluation metrics. Now supports evaluation-only mode for pre-trained models.
@@ -7,12 +7,12 @@ Advanced training and evaluation script for bias detection models. Features clas
 
 ### Training a new model
 ```bash
-python train_claude.py
+python train_model.py
 ```
 
 ### Evaluation only (with pre-trained model)
 ```bash
-python train_claude.py --eval-only --model-dir icebert
+python train_model.py --eval-only --model-dir icebert
 ```
 
 ## Command-line Arguments
