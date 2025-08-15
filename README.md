@@ -1,3 +1,5 @@
+# UNDER CONSTRUCTION
+
 # NERBiasIce - Named Entity Recognition for Bias Detection in Icelandic
 
 This project implements a Named Entity Recognition (NER) system for detecting and classifying bias-related language in Icelandic text. The system uses transformer-based models (IceBERT/ScandiBERT) fine-tuned on annotated Icelandic text data.
