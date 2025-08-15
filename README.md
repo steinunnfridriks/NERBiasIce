@@ -33,7 +33,7 @@ The system identifies and classifies potentially biased language into 14 categor
 
 2. **Evaluate the pre-trained model:**
    ```bash
-   python train_claude.py --eval-only --model-dir icebert
+   python train_model.py --eval-only --model-dir icebert
    ```
 
 3. **Generate performance visualization:**
@@ -45,7 +45,7 @@ The system identifies and classifies potentially biased language into 14 categor
 
 ### Core Training/Evaluation Scripts
 
-- **train_claude.py** - Advanced training script with class weighting for imbalanced data (ScandiBERT-based)
+- **train_model.py** - Advanced training script with class weighting for imbalanced data (ScandiBERT-based)
 - **train_model.py** - Basic training script using IceBERT
 - **test_model.py** - Interactive testing script for single text samples
 
