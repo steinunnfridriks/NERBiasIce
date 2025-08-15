@@ -243,15 +243,24 @@ def main():
     
     for dataset_name in datasets:
         output_file = f"comparison_{dataset_name}.png"
-        
         # Check if data exists for this dataset
         has_data = False
         for model in all_results:
             if dataset_name in all_results[model]:
                 has_data = True
                 break
-        
         if has_data:
+            # Print confidence intervals for overall F1 scores
+            print(f"\nConfidence intervals for {dataset_name} dataset:")
+            for model in all_results:
+                if dataset_name in all_results[model]:
+                    results = all_results[model][dataset_name]
+                    for metric in ["f1", "macro_f1", "micro_f1"]:
+                        key = f"eval_{metric}"
+                        value = results.get(key, None)
+                        if value is not None:
+                            lower, upper = bootstrap_confidence_interval(value)
+                            print(f"  {model} {metric}: {value:.3f} (CI: {lower:.3f} - {upper:.3f})")
             plot_three_panel_comparison(all_results, dataset_name, output_file)
         else:
             print(f"No data found for {dataset_name} dataset. Skipping plot generation.")
